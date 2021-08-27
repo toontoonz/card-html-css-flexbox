@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --dark-blue: hsl(233, 47%, 7%);
+    --desaturated-blue:  hsl(244, 38%, 16%);
+    --violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --white-main: hsla(0, 0%, 100%, 0.75);
+    --white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    display: flex;
+    background-color: var(--dark-blue);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 1440px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    height: 500px;
+}
+.card-left {
+    width: 50%;
+    background-color: var(--desaturated-blue);
+    padding: 5rem;
+}
+
+.card-left h1 {
+    font-size: 3rem;
+    color: var(--white);
+}
+.card-left p {
+    font-size: 1.2rem;
+    width: 450px;
+    color: var(--white-stat);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.card-left ul {
+    display: flex;
+    list-style: none;
+    color: var(--white);
+}
+
+.card-left ul li {
+    margin-right: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--white-stat);
+}
+
+.purple {
+    font-size: 3rem;
+    color: var(--violet);
+}
+
+.card-right {
+    width: 50%;
+    background-color: var(--violet);
+}
+
+.card-right img {
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    mix-blend-mode: hard-light;
+}
+
+@media only screen and (max-width: 960px) {
+    .card {
+        width: 375px;
+        flex-direction: column;
+        height: auto;
+    }
+    .card-left,.card-right {
+        width: 100%;
+    }
+    .card-left {
+        order: 2;
+        text-align: center;
+        padding: 3rem;
+    }
+    .card-left h1 {
+        font-size: 2rem;
+    }
+    .card-left p {
+        width: 100%;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .purple {
+        font-size: 2rem;
+    }
+    .card-left ul {
+        flex-direction: column;
+    }
+    .card-left ul li {
+        margin-right: 0;
+        margin-top: 1.5rem;
+    }
+
+    .card-right {
+        order: 1;
+    }
+}
